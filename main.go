@@ -21,6 +21,7 @@ func init() {
 func main() {
 	flag.Parse()
 
+	// Om flag er -K så vil den utføre en av disse to funksjonene basert på -out
 	var res float64
 	if K != 0 {
 		if out == "C" {
@@ -32,6 +33,7 @@ func main() {
 		}
 	}
 
+	//Om flag er -C så vil den utføre en av disse to funksjonene basert på -out
 	if C != 0 {
 		if out == "F" {
 			res = conv.CelcsiusToFahrenheit(C)
@@ -42,6 +44,7 @@ func main() {
 		}
 	}
 
+	//Om flag er -F så vil den utføre en av disse to funksjonene basert på -out
 	if F != 0 {
 		if out == "K" {
 			res = conv.FahrenheitToKelvin(F)
